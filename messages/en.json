@@ -1,9 +1,9 @@
 {
   "LoginPage": {
     "titleAccept": "Sign in to accept",
-    "titleWelcome": "Welcome back",
-    "descAccept": "Sign in and we'll take you to the invitation.",
-    "descWelcome": "Sign in to your account",
+    "titleWelcome": "Welcome to Path24 CRM",
+    "descAccept": "Sign in to Path24 CRM to accept the invitation.",
+    "descWelcome": "Sign in to manage customer conversations and automations.",
     "emailLabel": "Email",
     "emailPlaceholder": "you@example.com",
     "passwordLabel": "Password",
@@ -13,5 +13,9 @@
     "signIn": "Sign in",
     "noAccount": "Don't have an account?",
     "createAccount": "Create account"
+  },
+  "Brand": {
+    "name": "Path24 CRM",
+    "tagline": "WhatsApp customer management and automation"
   }
 }

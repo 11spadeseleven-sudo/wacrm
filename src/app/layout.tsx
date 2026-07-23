@@ -22,16 +22,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "wacrm",
-    template: "%s — wacrm",
+    default: "Path24 CRM",
+    template: "%s | Path24 CRM",
   },
-  description: "Self-hostable CRM template for WhatsApp.",
+  description: "Path24 CRM — WhatsApp customer management, automation and team collaboration.",
   robots: {
     index: false,
     follow: false,
   },
   icons: {
-    icon: [{ url: "/icon" }],
+    icon: [{ url: "/path24-mark.png", type: "image/png" }],
+    apple: [{ url: "/path24-mark.png", type: "image/png" }],
   },
   formatDetection: {
     email: false,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#020617",
+  themeColor: "#ED1C22",
   colorScheme: "dark light",
 };
 

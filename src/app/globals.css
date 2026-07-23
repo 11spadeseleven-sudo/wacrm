@@ -88,12 +88,12 @@
 
 :root,
 html[data-mode="dark"] {
-  --background: oklch(0.13 0.01 260);
+  --background: #101010;
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.18 0.01 260);
-  --card-2: oklch(0.205 0.01 260);
+  --card: #191919;
+  --card-2: #202020;
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.18 0.01 260);
+  --popover: #191919;
   --popover-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.22 0.01 260);
   --secondary-foreground: oklch(0.985 0 0);
@@ -109,7 +109,7 @@ html[data-mode="dark"] {
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.16 0.01 260);
+  --sidebar: #151515;
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.22 0.01 260);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -148,74 +148,22 @@ html[data-mode="light"] {
 /* ---- ACCENT: primary color ---- */
 
 :root,
-html[data-theme="violet"] {
-  --primary: oklch(0.526 0.247 293);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.6 0.22 293);
-  --primary-soft: oklch(0.526 0.247 293 / 0.12);
-  --primary-soft-2: oklch(0.526 0.247 293 / 0.2);
-  --ring: oklch(0.526 0.247 293);
-  --chart-1: oklch(0.526 0.247 293);
-  --sidebar-primary: oklch(0.526 0.247 293);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.526 0.247 293);
+html[data-theme="path24"] {
+  --primary: #ED1C22;
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #D71920;
+  --primary-soft: rgb(237 28 34 / 0.12);
+  --primary-soft-2: rgb(237 28 34 / 0.22);
+  --ring: #ED1C22;
+  --chart-1: #ED1C22;
+  --sidebar-primary: #ED1C22;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-ring: #ED1C22;
 }
 
-html[data-theme="emerald"] {
-  --primary: oklch(0.62 0.16 162);
-  --primary-foreground: oklch(0.16 0.02 162);
-  --primary-hover: oklch(0.68 0.15 162);
-  --primary-soft: oklch(0.62 0.16 162 / 0.12);
-  --primary-soft-2: oklch(0.62 0.16 162 / 0.22);
-  --ring: oklch(0.62 0.16 162);
-  --chart-1: oklch(0.62 0.16 162);
-  --chart-2: oklch(0.7 0.14 195);
-  --sidebar-primary: oklch(0.62 0.16 162);
-  --sidebar-primary-foreground: oklch(0.16 0.02 162);
-  --sidebar-ring: oklch(0.62 0.16 162);
-}
 
-html[data-theme="cobalt"] {
-  --primary: oklch(0.585 0.2 254);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.66 0.18 254);
-  --primary-soft: oklch(0.585 0.2 254 / 0.12);
-  --primary-soft-2: oklch(0.585 0.2 254 / 0.22);
-  --ring: oklch(0.585 0.2 254);
-  --chart-1: oklch(0.585 0.2 254);
-  --chart-2: oklch(0.7 0.15 220);
-  --sidebar-primary: oklch(0.585 0.2 254);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.585 0.2 254);
-}
 
-html[data-theme="amber"] {
-  --primary: oklch(0.745 0.16 65);
-  --primary-foreground: oklch(0.18 0.03 65);
-  --primary-hover: oklch(0.8 0.15 65);
-  --primary-soft: oklch(0.745 0.16 65 / 0.12);
-  --primary-soft-2: oklch(0.745 0.16 65 / 0.22);
-  --ring: oklch(0.745 0.16 65);
-  --chart-1: oklch(0.745 0.16 65);
-  --chart-2: oklch(0.7 0.15 35);
-  --sidebar-primary: oklch(0.745 0.16 65);
-  --sidebar-primary-foreground: oklch(0.18 0.03 65);
-  --sidebar-ring: oklch(0.745 0.16 65);
-}
 
-html[data-theme="rose"] {
-  --primary: oklch(0.645 0.22 16);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.71 0.2 16);
-  --primary-soft: oklch(0.645 0.22 16 / 0.12);
-  --primary-soft-2: oklch(0.645 0.22 16 / 0.22);
-  --ring: oklch(0.645 0.22 16);
-  --chart-1: oklch(0.645 0.22 16);
-  --chart-2: oklch(0.7 0.18 340);
-  --sidebar-primary: oklch(0.645 0.22 16);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.645 0.22 16);
-}
 
 @layer base {
   * {
@@ -228,3 +176,286 @@ html[data-theme="rose"] {
     @apply font-sans;
   }
 }
+
+/* Path24 CRM brand helpers */
+.path24-brand-surface {
+  background:
+    radial-gradient(circle at top right, rgb(237 28 34 / 0.12), transparent 34%),
+    var(--background);
+}
+
+.path24-logo-panel {
+  background: #ffffff;
+  border: 1px solid rgb(255 255 255 / 0.12);
+}
+
+/* ============================================================
+ * PATH24 BRAND LOCK
+ *
+ * The original template contains a mixture of semantic primary
+ * colours and hard-coded Tailwind violet/purple/status utilities.
+ * These final overrides force the full interface into the approved
+ * Path24 palette:
+ *
+ *   Path24 Red  #ED1C22
+ *   Black       #000000 / charcoal neutrals
+ *   White       #FFFFFF / light neutral greys
+ *
+ * This block intentionally sits at the end of the stylesheet so it
+ * wins over legacy template colours on every route.
+ * ============================================================ */
+
+:root,
+html,
+html[data-theme],
+html[data-theme="path24"],
+html[data-theme="violet"],
+html[data-theme="purple"],
+html[data-theme="emerald"],
+html[data-theme="cobalt"],
+html[data-theme="amber"],
+html[data-theme="rose"] {
+  --primary: #ED1C22 !important;
+  --primary-foreground: #FFFFFF !important;
+  --primary-hover: #C91419 !important;
+  --primary-soft: rgb(237 28 34 / 0.10) !important;
+  --primary-soft-2: rgb(237 28 34 / 0.18) !important;
+  --ring: #ED1C22 !important;
+  --chart-1: #ED1C22 !important;
+  --chart-2: #000000 !important;
+  --chart-3: #4A4A4A !important;
+  --chart-4: #8A8A8A !important;
+  --chart-5: #D9D9D9 !important;
+  --sidebar-primary: #ED1C22 !important;
+  --sidebar-primary-foreground: #FFFFFF !important;
+  --sidebar-ring: #ED1C22 !important;
+}
+
+/* Dark mode: black, charcoal, white and Path24 red only. */
+html[data-mode="dark"] {
+  --background: #000000 !important;
+  --foreground: #FFFFFF !important;
+  --card: #111111 !important;
+  --card-2: #181818 !important;
+  --card-foreground: #FFFFFF !important;
+  --popover: #111111 !important;
+  --popover-foreground: #FFFFFF !important;
+  --secondary: #1A1A1A !important;
+  --secondary-foreground: #FFFFFF !important;
+  --muted: #1A1A1A !important;
+  --muted-foreground: #A3A3A3 !important;
+  --accent: #1A1A1A !important;
+  --accent-foreground: #FFFFFF !important;
+  --border: #2A2A2A !important;
+  --input: #2A2A2A !important;
+  --sidebar: #090909 !important;
+  --sidebar-foreground: #FFFFFF !important;
+  --sidebar-accent: #1A1A1A !important;
+  --sidebar-accent-foreground: #FFFFFF !important;
+  --sidebar-border: #242424 !important;
+}
+
+/* Light mode: white, black, soft neutral grey and Path24 red only. */
+html[data-mode="light"] {
+  --background: #FFFFFF !important;
+  --foreground: #111111 !important;
+  --card: #FFFFFF !important;
+  --card-2: #F7F7F7 !important;
+  --card-foreground: #111111 !important;
+  --popover: #FFFFFF !important;
+  --popover-foreground: #111111 !important;
+  --secondary: #F2F2F2 !important;
+  --secondary-foreground: #111111 !important;
+  --muted: #F2F2F2 !important;
+  --muted-foreground: #686868 !important;
+  --accent: #F4F4F4 !important;
+  --accent-foreground: #111111 !important;
+  --border: #DEDEDE !important;
+  --input: #D8D8D8 !important;
+  --sidebar: #FFFFFF !important;
+  --sidebar-foreground: #111111 !important;
+  --sidebar-accent: #F4F4F4 !important;
+  --sidebar-accent-foreground: #111111 !important;
+  --sidebar-border: #E1E1E1 !important;
+}
+
+/* Legacy hard-coded colour utilities — text and icons. */
+[class*="text-violet-"],
+[class*="text-purple-"],
+[class*="text-indigo-"],
+[class*="text-blue-"],
+[class*="text-cyan-"],
+[class*="text-sky-"],
+[class*="text-emerald-"],
+[class*="text-green-"],
+[class*="text-lime-"],
+[class*="text-yellow-"],
+[class*="text-amber-"],
+[class*="text-orange-"],
+[class*="text-pink-"],
+[class*="text-rose-"] {
+  color: #ED1C22 !important;
+}
+
+/* Strong coloured backgrounds become solid Path24 red. */
+[class*="bg-violet-5"],
+[class*="bg-violet-6"],
+[class*="bg-violet-7"],
+[class*="bg-violet-8"],
+[class*="bg-violet-9"],
+[class*="bg-purple-5"],
+[class*="bg-purple-6"],
+[class*="bg-purple-7"],
+[class*="bg-purple-8"],
+[class*="bg-purple-9"],
+[class*="bg-indigo-5"],
+[class*="bg-indigo-6"],
+[class*="bg-indigo-7"],
+[class*="bg-blue-5"],
+[class*="bg-blue-6"],
+[class*="bg-blue-7"],
+[class*="bg-emerald-5"],
+[class*="bg-emerald-6"],
+[class*="bg-green-5"],
+[class*="bg-green-6"],
+[class*="bg-amber-5"],
+[class*="bg-amber-6"],
+[class*="bg-orange-5"],
+[class*="bg-orange-6"],
+[class*="bg-pink-5"],
+[class*="bg-pink-6"],
+[class*="bg-rose-5"],
+[class*="bg-rose-6"] {
+  background-color: #ED1C22 !important;
+  color: #FFFFFF !important;
+}
+
+/* Pale coloured pills, selected rows, badges and icon tiles. */
+[class*="bg-violet-50"],
+[class*="bg-violet-100"],
+[class*="bg-violet-200"],
+[class*="bg-purple-50"],
+[class*="bg-purple-100"],
+[class*="bg-purple-200"],
+[class*="bg-indigo-50"],
+[class*="bg-indigo-100"],
+[class*="bg-indigo-200"],
+[class*="bg-blue-50"],
+[class*="bg-blue-100"],
+[class*="bg-blue-200"],
+[class*="bg-emerald-50"],
+[class*="bg-emerald-100"],
+[class*="bg-emerald-200"],
+[class*="bg-green-50"],
+[class*="bg-green-100"],
+[class*="bg-green-200"],
+[class*="bg-yellow-50"],
+[class*="bg-yellow-100"],
+[class*="bg-yellow-200"],
+[class*="bg-amber-50"],
+[class*="bg-amber-100"],
+[class*="bg-amber-200"],
+[class*="bg-orange-50"],
+[class*="bg-orange-100"],
+[class*="bg-orange-200"],
+[class*="bg-pink-50"],
+[class*="bg-pink-100"],
+[class*="bg-pink-200"],
+[class*="bg-rose-50"],
+[class*="bg-rose-100"],
+[class*="bg-rose-200"] {
+  background-color: rgb(237 28 34 / 0.10) !important;
+  color: #ED1C22 !important;
+}
+
+/* Borders, outlines and rings. */
+[class*="border-violet-"],
+[class*="border-purple-"],
+[class*="border-indigo-"],
+[class*="border-blue-"],
+[class*="border-cyan-"],
+[class*="border-emerald-"],
+[class*="border-green-"],
+[class*="border-yellow-"],
+[class*="border-amber-"],
+[class*="border-orange-"],
+[class*="border-pink-"],
+[class*="border-rose-"],
+[class*="ring-violet-"],
+[class*="ring-purple-"],
+[class*="ring-indigo-"],
+[class*="ring-blue-"],
+[class*="ring-emerald-"],
+[class*="ring-green-"],
+[class*="ring-amber-"],
+[class*="ring-orange-"],
+[class*="ring-pink-"],
+[class*="ring-rose-"] {
+  border-color: #ED1C22 !important;
+  --tw-ring-color: #ED1C22 !important;
+}
+
+/* Legacy gradients. */
+[class*="from-violet-"],
+[class*="from-purple-"],
+[class*="from-indigo-"],
+[class*="from-blue-"],
+[class*="from-emerald-"],
+[class*="from-green-"],
+[class*="from-amber-"],
+[class*="from-orange-"],
+[class*="from-pink-"],
+[class*="from-rose-"] {
+  --tw-gradient-from: #ED1C22 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(237 28 34 / 0) var(--tw-gradient-to-position) !important;
+}
+
+[class*="to-violet-"],
+[class*="to-purple-"],
+[class*="to-indigo-"],
+[class*="to-blue-"],
+[class*="to-emerald-"],
+[class*="to-green-"],
+[class*="to-amber-"],
+[class*="to-orange-"],
+[class*="to-pink-"],
+[class*="to-rose-"] {
+  --tw-gradient-to: #000000 var(--tw-gradient-to-position) !important;
+}
+
+/* Preserve readable foregrounds for primary controls. */
+.bg-primary,
+button.bg-primary,
+a.bg-primary {
+  background-color: #ED1C22 !important;
+  color: #FFFFFF !important;
+}
+
+.text-primary {
+  color: #ED1C22 !important;
+}
+
+.border-primary {
+  border-color: #ED1C22 !important;
+}
+
+.bg-primary-soft {
+  background-color: rgb(237 28 34 / 0.10) !important;
+}
+
+.bg-primary-soft-2 {
+  background-color: rgb(237 28 34 / 0.18) !important;
+}
+
+/* Selected navigation and highlighted list items. */
+[data-active="true"],
+[aria-current="page"] {
+  --primary: #ED1C22 !important;
+}
+
+/* Selection colour inside the browser. */
+::selection {
+  background: #ED1C22;
+  color: #FFFFFF;
+}
+

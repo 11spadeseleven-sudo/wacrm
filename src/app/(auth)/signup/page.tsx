@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -91,8 +92,8 @@ function SignupPageInner() {
 
   if (success) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <Card className="w-full max-w-md border-border bg-card">
+      <div className="path24-brand-surface flex min-h-screen items-center justify-center px-4 py-8">
+        <Card className="w-full max-w-md border-border bg-card shadow-2xl shadow-black/20">
           <CardHeader className="items-center text-center">
             <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
               <CheckCircle className="h-6 w-6 text-primary" />
@@ -128,14 +129,31 @@ function SignupPageInner() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <Card className="w-full max-w-md border-border bg-card">
+    <div className="path24-brand-surface flex min-h-screen items-center justify-center px-4 py-8">
+      <Card className="w-full max-w-md border-border bg-card shadow-2xl shadow-black/20">
         <CardHeader className="items-center text-center">
-          <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+          <div className="path24-logo-panel mb-4 flex h-20 w-full max-w-[230px] items-center justify-center rounded-xl px-4 py-2 shadow-sm">
             {inviteToken ? (
-              <UsersRound className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/path24-mark.png"
+                  alt="Path24 Laboratories"
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 object-contain"
+                  priority
+                />
+                <UsersRound className="h-6 w-6 text-primary" />
+              </div>
             ) : (
-              <MessageSquare className="h-6 w-6 text-primary" />
+              <Image
+                src="/path24-logo.png"
+                alt="Path24 Laboratories"
+                width={260}
+                height={110}
+                className="h-full w-auto object-contain"
+                priority
+              />
             )}
           </div>
           <CardTitle className="text-xl text-foreground">
@@ -144,7 +162,7 @@ function SignupPageInner() {
           <CardDescription className="text-muted-foreground">
             {inviteToken
               ? "Verify your email, then accept the invitation to join your team."
-              : "Get started with CRM Template for WhatsApp"}
+              : "Create your Path24 CRM workspace and start managing customer conversations."}
           </CardDescription>
         </CardHeader>
         <CardContent>
